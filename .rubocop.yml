@@ -1,0 +1,23 @@
+inherit_gem:
+  google-style: google-style.yml
+
+AllCops:
+  Exclude:
+    - "acceptance/**/*"
+    - "google-generativeai.gemspec"
+    - "test/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: false
+Metrics/AbcSize:
+    Max: 40
+Metrics/ClassLength:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 40
+Naming/FileName:
+  Exclude:
+    - "lib/google-generativeai.rb"

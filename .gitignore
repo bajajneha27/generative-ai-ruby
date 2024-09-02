@@ -1,0 +1,5 @@
+Gemfile.lock
+doc/*
+
+# Ignore YARD stuffs
+.yardoc
