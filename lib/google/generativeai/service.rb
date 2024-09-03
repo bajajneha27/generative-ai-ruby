@@ -13,34 +13,20 @@
 # limitations under the License.
 
 
-require "google-generativeai"
+require "google/generativeai/version"
 
 module Google
   module GenerativeAI
-    ##
-    # # Google Generative AI
-    #
-    # Google GenerativeAI is a Ruby gem to use Gemini API.
-    #
-    #
-    ##
-    def self.new
-      
-    end
+      class Service
+        # @private
+        attr_accessor :api_key
 
-    ##
-    # Captures the default client configuration.
-    #
-    # The following configuration parameters are supported:
-    #
-    # * `api_key` - (String) The API Key to make GenAI calls. If no API key has
-    # been provided and the `GOOGLE_API_KEY` environment variable is set, it
-    # will be used as the API key.
-    #
-    # @return []
-    #
-    def self.configure
-      #TODO - Configure globally
+        ##
+        # Creates a new Service instance.
+        def initialize api_key
+          @api_key = api_key || ENV['GOOGLE_API_KEY']
+        end
+      end
     end
   end
 end
